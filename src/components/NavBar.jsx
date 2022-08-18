@@ -1,12 +1,14 @@
+import React from 'react';
 import './App.css';
-import './components/NavBar';
-import logo from './img/logo.jpg';
-function App() {
+import Form from './Form';
+
+function NavBar() {
+  
   return (
-    <div className="container">
+    <>
       <nav id="barraNav" className=" navbar navbar-expand-lg navbar-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#"><img className="logoNav" src={logo} /></a>
+          <a className="navbar-brand" href="#"><img className="logoNav" src="../img/logo.jpg" /></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
@@ -37,16 +39,15 @@ function App() {
                 <a className="nav-link" href="#">Contacto</a>
               </li>
             </ul>
-            <form className="d-flex">
-              <input className="form-control me-sm-2" type="text" placeholder="Buscar" />
-              <button className="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
+            <Form contBuscar = "Productos" />
           </div>
         </div>
       </nav>
-    </div>
+    </>
   );
 }
 
 
-export default App;
+export default NavBar;
+
+
