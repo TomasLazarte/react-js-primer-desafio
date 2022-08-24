@@ -1,7 +1,12 @@
+
 #barraNav {
     background-color: #111930;
 }
 
 .logoNav {
     width: 5rem;
+}
+
+.carrito {
+    width: 3rem;
 }
