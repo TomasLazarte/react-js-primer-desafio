@@ -1,6 +1,6 @@
-
 #barraNav {
     background-color: #111930;
+    border-radius: 5px;
 }
 
 .logoNav {
@@ -9,4 +9,24 @@
 
 .carrito {
     width: 3rem;
+}
+
+.objeto {
+    text-align: center;
+}
+
+.objeto img{
+    width: 25%;
+}
+
+.cantidad {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 3px;
 }
