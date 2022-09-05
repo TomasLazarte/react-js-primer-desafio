@@ -14,12 +14,17 @@
 .cardContainer {
     margin-top: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.cardProductos {
-    text-align: center;
-    max-width: 20rem;
+
+.cardContainer img {
+    width: 40%;
+}
+
+.cardProductos{
+    display: grid;
+    align-content: space-evenly;
 }
 
 .cardProductos img{

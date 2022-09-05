@@ -2,7 +2,7 @@ export const arrayProductos = [
     {
         id: 1,
         nombre: 'Fra Nui',
-        descripcion: 'Frambuesas bañadas con chocolate amargo y chocolate blanco',
+        descripcion: 'Frambuesas bañadas con chocolate amargo y chocolate blanco (150g) - Rapanui',
         precio: 750,
         img: '../../img/franui.png',
     },
