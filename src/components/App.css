@@ -11,12 +11,19 @@
     width: 3rem;
 }
 
-.objeto {
-    text-align: center;
+.cardContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
 }
 
-.objeto img{
-    width: 25%;
+.cardProductos {
+    text-align: center;
+    max-width: 20rem;
+}
+
+.cardProductos img{
+    width: 100%;
 }
 
 .cantidad {

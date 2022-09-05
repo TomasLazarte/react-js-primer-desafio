@@ -1,12 +1,13 @@
 import React from 'react';
 import NavBar from './NavBar/NavBar';
 import {ItemListContainer} from './ItemListContainer/ItemListContainer';
-import { ItemCount } from './ItemListContainer/ItemCount';
+import {ItemCount} from './ItemCount/ItemCount';
+
 const App = () => {
     return (
         <>
             <NavBar/>
-            <ItemListContainer saludo = "grandbourg golosinas"/>
+            <ItemListContainer nombre = "grandbourg golosinas"/>
         </>
     );
 }

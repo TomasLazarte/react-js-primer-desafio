@@ -9,7 +9,7 @@ function NavBar() {
     <>
       <nav id="barraNav" className="container navbar navbar-expand-lg navbar-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#"><img className="logoNav" src="../img/logo.jpg" /></a>
+          <a className="navbar-brand" href="#"><img className="logoNav" src="../../img/logo.jpg" /></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
