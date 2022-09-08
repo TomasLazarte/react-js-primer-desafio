@@ -1,35 +1,34 @@
-import React from 'react';
-import {ItemCount} from '../ItemCount/ItemCount'
+import {React, useState, useEffect } from 'react';
+import './ItemListContainer.scss'
 import { obtenerProductos } from '../helpers/obtenerProductos';
-import { arrayProductos } from '../../data/data';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { productos } from '../../data/data';
 import { ItemList } from './ItemList'
-export const ItemListContainer = ({nombre}) => {
+import { useParams } from 'react-router-dom';
 
-    function agregar(cont) {
-        console.log(`Se han agregado ${cont} productos.`)
-    }
-
-    // Variable de estado
-    const [productos, setProductos] = useState([])
-
+export const ItemListContainer = () => {
+    const [producto, setProducto] = useState([])
+    const [cargando, setCargando] = useState(true)
+    const {category} = useParams()
     useEffect(() => {
-        obtenerProductos(arrayProductos)
-            .then(response => 
-                setProductos(response)
-            )
+        obtenerProductos(productos)
+            .then(res => {
+                category?
+                    setProducto(res.find((item) => item.category === category))
+                :
+                    setProducto(res)
+            })
             .catch(error => console.error(error))
-    }, []);
+            .finally(() => setCargando(false))
+    }, [category]);
 
     return (
-        <div className="container">
-            <h1>Hola, somos {nombre}, delivery de kiosco.</h1>
-            <h3>Hacemos envíos de 18 a 00hs</h3>
-            <div className="container cardContainer">
-                <ItemCount stock={5} agregar={agregar}/>
-                <ItemList items={productos}/>
-            </div>
+        <div className='container contenedorProductos'>
+            {
+                cargando?
+                    <div>Cargando...</div>
+                :
+                    <ItemList items={producto}/>
+            }
         </div>
     );
 }

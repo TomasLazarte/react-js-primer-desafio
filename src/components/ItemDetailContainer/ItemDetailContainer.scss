@@ -1,0 +1,27 @@
+.contenedorDetalles {
+    padding: 20px;
+    .cardDetalles {
+        display: flex;
+        width: 100%;
+        .divImg{
+            width: 50%;
+            .imgDetalles {
+                width: 100%;
+            }
+        }
+        .infoDetalles {
+            width: 50%;
+            display: grid;
+            align-content: space-around;
+            .btnDetalles {
+                display: flex;
+                justify-content: center;
+                margin: 3px;
+                .stockDetalles {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+            }
+        }    
+    }
+}

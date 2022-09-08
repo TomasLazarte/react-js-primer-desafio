@@ -1,9 +1,12 @@
 import {React, useState} from 'react';
-import '../App.css';
+import '../ItemDetailContainer/ItemDetailContainer.scss'
+export const ItemCount = ({stock, initial}) => {
 
-export const ItemCount = ({stock, agregar, inicial}) => {
+    const [cont, setCont] = useState(initial);
 
-    const [cont, setCont] = useState(inicial);
+    const agregar = (cont) => {
+        console.log(`Se han agregado ${cont} productos.`)
+    }
 
     function sumar() {
         if(cont < stock){
@@ -18,23 +21,19 @@ export const ItemCount = ({stock, agregar, inicial}) => {
     }
 
     return (
-        <></>
-        // <div className='container objeto d-block'>
-        //     <img src="../img/franui.png"/>
-        //     <h3>Fra Nui</h3>
-        //     <p>Stock: {stock}</p>
-        //     <div className='botones'>
-        //         <button className='btn btn-danger' onClick={restar}>
-        //             -
-        //         </button>
-        //         <p className='cantidad'>Cantidad: {cont}</p>
-        //         <button className='btn btn-success' onClick={sumar}>
-        //             +
-        //         </button>
-        //     </div>    
-        //     <button className='btn btn-light' onClick={() => agregar(cont)}>
-        //         Agregar
-        //     </button> 
-        // </div>
+        <>
+            <div className='btnDetalles'>
+                <button className='btn btn-danger' onClick={restar}>
+                    -
+                </button>
+                <p className='stockDetalles' >Cantidad: {cont}</p>
+                <button className='btn btn-success' onClick={sumar}>
+                    +
+                </button>
+            </div>
+            <button className='btn btn-light' onClick={() => agregar(cont)}>
+                Agregar
+            </button>
+        </>
     )
 }

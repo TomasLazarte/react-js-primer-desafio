@@ -1,13 +1,15 @@
 import {React} from 'react';
-export const Item = ({id, nombre, descripcion, precio, img}) => {
-    return (
-            <div className="cardProductos">
-                <div className="card-body">
-                    <img src={img}/>
-                    <h4 className="card-title">{nombre}</h4>
-                    <h5>${precio}</h5>
-                    <p className="card-text">{descripcion}</p>
+import { Link } from 'react-router-dom';
+
+export const Item = ({producto}) => {
+        return (
+                <div className="cardProductos card-body border-secondary mb-3">
+                        <img className="imgProductos" src={producto.img}/>
+                        <h4 className="card-title">{producto.nombre}</h4>
+                        <p className="card-text">${producto.precio}</p>
+                        <Link to={`/item/${producto.id}`}>
+                                <button className="btn btn-secondary">Detalles</button>
+                        </Link>
                 </div>
-            </div>
-    );
+        );
 }
