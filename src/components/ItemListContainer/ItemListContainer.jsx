@@ -27,7 +27,7 @@ export const ItemListContainer = () => {
                 cargando?
                     <div>Cargando...</div>
                 :
-                    <ItemList items={producto}/>
+                    <ItemList items = {producto}/>
             }
         </div>
     );
