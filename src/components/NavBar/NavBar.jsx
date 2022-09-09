@@ -16,9 +16,7 @@ function NavBar() {
           <div className="collapse navbar-collapse nav-items" id="navbarColor01">
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link active" href="#">Inicio
-                  <span className="visually-hidden">(current)</span>
-                </a>
+                <Link to={'/'} className="nav-link">Inicio</Link>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Productos</a>

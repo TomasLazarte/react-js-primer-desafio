@@ -13,14 +13,13 @@ export const ItemListContainer = () => {
         obtenerProductos(productos)
             .then(res => {
                 category?
-                    setProducto(res.find((item) => item.category === category))
+                    setProducto(res.filter((item) => item.category === category))
                 :
                     setProducto(res)
             })
             .catch(error => console.error(error))
             .finally(() => setCargando(false))
     }, [category]);
-
     return (
         <div className='container contenedorProductos'>
             {

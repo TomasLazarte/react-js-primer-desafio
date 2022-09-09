@@ -1,11 +1,21 @@
 import {React, useState} from 'react';
 import '../ItemDetailContainer/ItemDetailContainer.scss'
-export const ItemCount = ({stock, initial}) => {
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+export const ItemCount = ({stock, initial, producto}) => {
 
     const [cont, setCont] = useState(initial);
 
     const agregar = (cont) => {
-        console.log(`Se han agregado ${cont} productos.`)
+        toast.success(`Se han agregado ${cont} ${producto}.`, {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
     }
 
     function sumar() {
@@ -34,6 +44,7 @@ export const ItemCount = ({stock, initial}) => {
             <button className='btn btn-light' onClick={() => agregar(cont)}>
                 Agregar
             </button>
+            <ToastContainer/>
         </>
     )
 }

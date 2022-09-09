@@ -10,7 +10,7 @@ export const ItemDetail = ({details}) => {
                 <h2 className="card-title">{details.nombre}</h2>
                 <h4 className="card-text">$ {details.precio}</h4>
                 <p className="card-text">{details.descripcion}</p>
-                <ItemCount stock={details.stock} initial={1}/>
+                <ItemCount stock={details.stock} initial={1} producto={details.nombre}/>
             </div>
         </div>
     );

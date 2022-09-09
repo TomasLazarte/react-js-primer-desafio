@@ -1,10 +1,12 @@
 .contenedorDetalles {
     padding: 20px;
+    display: flex;
+    justify-content: center;
     .cardDetalles {
         display: flex;
-        width: 100%;
+        max-width: 520px;
         .divImg{
-            width: 50%;
+            width: 100%;
             .imgDetalles {
                 width: 100%;
             }
