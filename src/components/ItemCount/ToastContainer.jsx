@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import { ToastContainer } from 'react-toastify';
 export const ToastContainer = () => {
@@ -13,5 +14,16 @@ export const ToastContainer = () => {
             draggable
             pauseOnHover
         />
+
+        toast.success(`Se han agregado ${cont} productos.`, {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
     );
 }
+*/

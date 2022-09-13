@@ -10,8 +10,9 @@
         border-radius: 10px;
         max-width: 18rem;
         .imgProductos {
-            width: 80%;
-            height: 80%;
+            display: block;
+            max-width: 100%;
+            height: auto;
         }
     }
 }

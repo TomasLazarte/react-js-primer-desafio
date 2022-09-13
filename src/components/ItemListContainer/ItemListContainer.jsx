@@ -10,6 +10,7 @@ export const ItemListContainer = () => {
     const [cargando, setCargando] = useState(true)
     const {category} = useParams()
     useEffect(() => {
+        setCargando(true)
         obtenerProductos(productos)
             .then(res => {
                 category?
@@ -20,6 +21,7 @@ export const ItemListContainer = () => {
             .catch(error => console.error(error))
             .finally(() => setCargando(false))
     }, [category]);
+    
     return (
         <div className='container contenedorProductos'>
             {
