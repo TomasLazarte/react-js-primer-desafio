@@ -9,7 +9,6 @@ export const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({})
     const [cargando, setCargando] = useState(true)
     const {itemId} = useParams()
-
     useEffect(() => {
         obtenerProductos(productos)
             .then(res => setProducto(res.find((producto) => producto.id === Number(itemId))))

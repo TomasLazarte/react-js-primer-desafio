@@ -4,7 +4,6 @@ import { obtenerProductos } from '../helpers/obtenerProductos';
 import { productos } from '../../data/data';
 import { ItemList } from './ItemList'
 import { useParams } from 'react-router-dom';
-
 export const ItemListContainer = () => {
     const [producto, setProducto] = useState([])
     const [cargando, setCargando] = useState(true)

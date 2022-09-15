@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavBar.scss'
 import { Link } from 'react-router-dom';
-import {CardWidget} from './CardWidget';
+import {CartWidget} from './CartWidget';
 import Form from './Form';
 function NavBar() {
   
@@ -38,7 +38,7 @@ function NavBar() {
             <Form placeholder = "Productos" />
           </div>
           <div className="carritoContainer">
-              <a href="#"><CardWidget /></a>
+              <a href="#"><CartWidget /></a>
           </div>
         </div>
       </nav>

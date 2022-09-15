@@ -3,11 +3,10 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 export const ItemDetail = ({details}) => {
 
-    const [agregado, setAgregado] = useState(false)
+    const [cantidadProductos, setCantidadProductos] = useState(0)
 
     const onAdd = (cont) => {
-        const precioFinal = cont * details.precio
-        setAgregado(true)
+        setCantidadProductos(cont)
     }
 
     return (
@@ -19,7 +18,7 @@ export const ItemDetail = ({details}) => {
                 <h2 className="card-title">{details.nombre}</h2>
                 <h4 className="card-text">$ {details.precio}</h4>
                 <p className="card-text">{details.descripcion}</p>
-                {agregado == false ?
+                {cantidadProductos === 0 ?
                     <ItemCount stock={details.stock} initial={1} onAdd={onAdd}/>
                 :
                     <Link to={'/cart'}>
