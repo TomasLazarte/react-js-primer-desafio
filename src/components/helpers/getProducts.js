@@ -1,7 +1,7 @@
-export const obtenerProductos = (productos) => {
+export const getProducts = (products) => {
     return new Promise ((resolve, reject) => {
         setTimeout(() => {
-            resolve(productos)
+            resolve(products)
         }, 2000);
     })
 }

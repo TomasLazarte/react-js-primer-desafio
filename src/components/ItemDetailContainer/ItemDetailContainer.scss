@@ -1,25 +1,25 @@
-.contenedorDetalles {
+.containerDetail {
     padding: 20px;
     display: flex;
     justify-content: center;
-    .cardDetalles {
+    .cardDetail {
         display: flex;
         max-width: 520px;
-        .divImg{
+        .imgDiv{
             width: 100%;
-            .imgDetalles {
+            .imgDetail {
                 width: 100%;
             }
         }
-        .infoDetalles {
+        .infoDetail {
             width: 50%;
             display: grid;
             align-content: space-around;
-            .btnDetalles {
+            .btnDetail {
                 display: flex;
                 justify-content: center;
                 margin: 3px;
-                .stockDetalles {
+                .stockDetail {
                     padding-left: 5px;
                     padding-right: 5px;
                 }

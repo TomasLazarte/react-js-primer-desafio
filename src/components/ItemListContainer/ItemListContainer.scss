@@ -1,18 +1,25 @@
-.contenedorProductos {
+.containerProducts {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
     padding: 20px;
-    .cardProductos {
-        margin: 10px;
+    margin: 10px;
+    .cardProducts {
+        max-width: 12rem;
         border: 3px solid #111930;
-        border-radius: 10px;
-        max-width: 18rem;
-        .imgProductos {
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
+        border-radius: 5px;
     }
 }
+
+// .cardProducts {
+//     margin: 10px;
+//     border: 3px solid #111930;
+//     border-radius: 10px;
+//     max-width: 18rem;
+//     .imgProducts {
+//         display: block;
+//         max-width: 100%;
+//         height: auto;
+//     }
+// }

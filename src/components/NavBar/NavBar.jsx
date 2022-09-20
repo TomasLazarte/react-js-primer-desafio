@@ -7,9 +7,9 @@ function NavBar() {
   
   return (
     <>
-      <nav id="barraNav" className="navbar navbar-expand-lg navbar-dark">
+      <nav id="navBar" className="navbar navbar-expand-lg navbar-dark">
         <div className="container-fluid">
-          <Link to={'/'} ><img className="logoNav" src="../../img/logo.jpg" /></Link>
+          <Link to={'/'} ><img className="navLogo" src="../../img/logo.jpg" /></Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
@@ -37,8 +37,8 @@ function NavBar() {
             </ul>
             <Form placeholder = "Productos" />
           </div>
-          <div className="carritoContainer">
-              <a href="#"><CartWidget /></a>
+          <div className="cartContainer">
+              <Link to={'/cart'}><CartWidget /></Link>
           </div>
         </div>
       </nav>

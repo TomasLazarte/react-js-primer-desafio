@@ -1,33 +1,33 @@
 import {React, useState, useEffect } from 'react';
 import './ItemListContainer.scss'
-import { obtenerProductos } from '../helpers/obtenerProductos';
-import { productos } from '../../data/data';
+import { getProducts } from '../helpers/getProducts';
+import { products } from '../../data/products';
 import { ItemList } from './ItemList'
 import { useParams } from 'react-router-dom';
 export const ItemListContainer = () => {
-    const [producto, setProducto] = useState([])
-    const [cargando, setCargando] = useState(true)
+    const [product, setProduct] = useState([])
+    const [loading, setLoading] = useState(true)
     const {category} = useParams()
     useEffect(() => {
-        setCargando(true)
-        obtenerProductos(productos)
+        setLoading(true)
+        getProducts(products)
             .then(res => {
                 category?
-                    setProducto(res.filter((item) => item.category === category))
+                    setProduct(res.filter((item) => item.category === category))
                 :
-                    setProducto(res)
+                    setProduct(res)
             })
             .catch(error => console.error(error))
-            .finally(() => setCargando(false))
+            .finally(() => setLoading(false))
     }, [category]);
     
     return (
-        <div className='container contenedorProductos'>
+        <div className='containerProducts'>
             {
-                cargando?
+                loading?
                     <div>Cargando...</div>
                 :
-                    <ItemList items = {producto}/>
+                    <ItemList products = {product}/>
             }
         </div>
     );

@@ -9,33 +9,40 @@ export const useCartContext = () => useContext(CartContext)
 // Envuelve nuestra app
 const CartProvider = ({children}) => {
     
-    const [carrito, setCarrito] = useState([])
+    const [cart, setCart] = useState([])
     
-    const agregarProducto = (producto, cantidad) => {
-        if(estaEnCarrito(producto.id)){
-            setCarrito(carrito.map(item => {
-                return item.id === producto.id ? {...item, cantidad: item.cantidad + cantidad}
+    const addProduct = (product, quantity) => {
+        if(isInCart(product.id)){
+            setCart(cart.map(item => {
+                return item.id === product.id ? {...item, quantity: item.quantity + quantity}
                 : item
             }))
         } else {
-            setCarrito([...carrito, {...producto, cantidad}])
+            setCart([...cart, {...product, quantity}])
         }
     }
 
-    console.log(carrito)
-    const estaEnCarrito = (id) =>
-        carrito.find((item) => item.id === id) ? true
+    const isInCart = (id) =>
+        cart.find((item) => item.id === id) ? true
         : false
     
-    const limpiarCarrito = () => setCarrito([])
+    const cleanCart = () => setCart([])
 
-    const eliminarProducto = (id) => {
-        setCarrito(carrito.filter(item => item.id !== id))
+    const deleteProduct = (id) => {
+        setCart(cart.filter(item => item.id !== id))
+    }
+
+    const totalCart = () => {
+        let total = 0
+        cart.forEach((element) => {
+            total = total + (element.quantity * element.price)
+        })
+        return total
     }
 
 
 
-    return <CartContext.Provider value={{carrito, agregarProducto, estaEnCarrito, limpiarCarrito, eliminarProducto}}> {children} </CartContext.Provider>
+    return <CartContext.Provider value={{cart, addProduct, isInCart, cleanCart, deleteProduct, totalCart}}> {children} </CartContext.Provider>
 }
 
 export default CartProvider;
