@@ -1,5 +1,6 @@
 import {React, useState, useEffect } from 'react';
 import './ItemListContainer.scss'
+import {getFirestore, collection, getDocs, query, where} from 'firebase/firestore';
 import { getProducts } from '../helpers/getProducts';
 import { products } from '../../data/products';
 import { ItemList } from './ItemList'
@@ -10,15 +11,19 @@ export const ItemListContainer = () => {
     const {category} = useParams()
     useEffect(() => {
         setLoading(true)
-        getProducts(products)
-            .then(res => {
-                category?
-                    setProduct(res.filter((item) => item.category === category))
-                :
-                    setProduct(res)
-            })
-            .catch(error => console.error(error))
-            .finally(() => setLoading(false))
+            const querydb = getFirestore()
+            const queryCollection = collection(querydb, 'products')
+            if(category) {
+                const queryFilter = query(queryCollection, where('category', '==', category))
+                console.log(category)
+                getDocs(queryFilter)
+                    .then(res => setProduct(res.docs.map(product => ({id: product.id, ...product.data()}))))
+                    .finally(() => setLoading(false))
+            } else {
+                getDocs(queryCollection)
+                    .then(res => setProduct(res.docs.map(product => ({id: product.id, ...product.data()}))))
+                    .finally(() => setLoading(false))
+            }
     }, [category]);
     
     return (
