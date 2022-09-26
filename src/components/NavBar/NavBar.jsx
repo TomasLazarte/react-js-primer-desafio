@@ -2,6 +2,7 @@ import React from 'react';
 import './NavBar.scss'
 import { Link } from 'react-router-dom';
 import {CartWidget} from './CartWidget';
+import { Cart } from '../CartContext/Cart';
 import Form from './Form';
 function NavBar() {
   
@@ -39,6 +40,9 @@ function NavBar() {
           </div>
           <div className="cartContainer">
               <Link to={'/cart'}><CartWidget /></Link>
+          </div>
+          <div className="cartNumbers">
+              <Cart/>
           </div>
         </div>
       </nav>

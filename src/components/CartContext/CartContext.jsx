@@ -32,6 +32,13 @@ const CartProvider = ({children}) => {
         setCart(cart.filter(item => item.id !== id))
     }
 
+    const totalProducts = () => {
+        let total = 0
+        cart.forEach((element) => {
+            total = total + (element.quantity)
+        })
+        return total
+    }
     const totalCart = () => {
         let total = 0
         cart.forEach((element) => {
@@ -42,7 +49,7 @@ const CartProvider = ({children}) => {
 
 
 
-    return <CartContext.Provider value={{cart, addProduct, isInCart, cleanCart, deleteProduct, totalCart}}> {children} </CartContext.Provider>
+    return <CartContext.Provider value={{cart, addProduct, isInCart, cleanCart, deleteProduct, totalProducts, totalCart}}> {children} </CartContext.Provider>
 }
 
 export default CartProvider;

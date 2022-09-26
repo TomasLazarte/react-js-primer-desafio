@@ -3,12 +3,13 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
-    padding: 20px;
     margin: 10px;
     .cardProducts {
         max-width: 12rem;
-        border: 3px solid #111930;
+        border: 2px solid #111930;
         border-radius: 5px;
+        padding: 20px;
+        margin: 10px;
     }
 }
 

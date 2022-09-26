@@ -2,7 +2,10 @@ import React from 'react';
 import { FaCartPlus } from 'react-icons/fa';
 
 export const CartWidget = () => {
+
     return (
-        <button className="cart btn" ><FaCartPlus/></button>
+        <div>
+            <button className="cart btn" ><FaCartPlus/></button>
+        </div>
     );
 }
