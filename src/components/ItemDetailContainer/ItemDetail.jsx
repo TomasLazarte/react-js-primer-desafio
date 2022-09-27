@@ -26,7 +26,7 @@ export const ItemDetail = ({details}) => {
                 :
                     <Link to={'/cart'}>
                         <button className='btn btn-light'>
-                            Finalizar Compra.
+                            Ir al carrito
                         </button>
                     </Link>
                 }

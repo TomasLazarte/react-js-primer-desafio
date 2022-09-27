@@ -13,12 +13,3 @@ export const Item = ({product}) => {
                 </div>
         );
 }
-
-{/*// <div className="cardProducts card-body border-secondary mb-3">
-                //         <img className="imgProducts" src={product.img} alt="imagen-de-golosina"/>
-                //         <h4 className="card-title">{product.name}</h4>
-                //         <p className="card-text">${product.price}</p>
-                //         <Link to={`/item/${product.id}`}>
-                //                 <button className="btn btn-secondary">Detalles</button>
-                //         </Link>
-                // </div>*/}

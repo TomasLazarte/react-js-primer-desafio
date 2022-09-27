@@ -42,6 +42,12 @@ export const CartView = () => {
                             <button className='btn btn-secondary'>Seguir Comprando</button>
                         </Link>
                         <button className='btn btn-primary' onClick={() => cleanCart()}>Vaciar Carrito</button>
+                        <br />
+                        <div>
+                            <Link to={'/checkout'}>
+                                <button className='btn btn-light'>Comprar</button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
                 
