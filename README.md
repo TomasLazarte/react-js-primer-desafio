@@ -1,7 +1,7 @@
 # Desarrollador : Tomás Lazarte
 
-# Proyecto e-commerce : Grand Bourg Golosinas
-
+# Proyecto e-commerce con ReactJS
+Tienda electrónica de golosinas que simula la compra de productos. Contiene buscador de productos, carrito, categorías, formulario para completar la compra y demás funciones básicas de una tienda.
 
 # Dependencias
 
