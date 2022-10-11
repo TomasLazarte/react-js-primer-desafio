@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Form = ({placeholder}) => {
+export const Form = ({placeholder}) => {
     return (
         <>
             <form className="d-flex">
@@ -10,5 +10,3 @@ const Form = ({placeholder}) => {
         </>
     );
 }
-
-export default Form;

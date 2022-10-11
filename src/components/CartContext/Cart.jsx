@@ -1,14 +1,15 @@
 import React, {useContext} from 'react';
 import { CartContext } from '../CartContext/CartContext';
+import "./Cart.scss"
 
 export const Cart = () => {
     const {cart, totalProducts} = useContext(CartContext)
 
     return (
-        <div>
+        <>
             {cart.length === 0 ? ""
-            : <h5>{totalProducts()}</h5>
+            : <p>{totalProducts()}</p>
             }
-        </div>
+        </>
     );
 }

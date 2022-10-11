@@ -1,13 +1,11 @@
 import React from 'react';
 import './NavBar.scss'
 import { Link } from 'react-router-dom';
-import {CartWidget} from './CartWidget';
-import { Cart } from '../CartContext/Cart';
-import Form from './Form';
+import { CartWidget } from './CartWidget';
+import { Form } from './Form';
 function NavBar() {
   
   return (
-    <>
       <nav id="navBar" className="navbar navbar-expand-lg navbar-dark">
         <div className="container-fluid">
           <Link to={'/'} ><img className="navLogo" src="../../img/logo.jpg" /></Link>
@@ -39,14 +37,10 @@ function NavBar() {
             <Form placeholder = "Productos" />
           </div>
           <div className="cartContainer">
-              <Link to={'/cart'}><CartWidget /></Link>
-          </div>
-          <div className="cartNumbers">
-              <Cart/>
+            <Link to={'/cart'}><CartWidget /></Link>
           </div>
         </div>
       </nav>
-    </>
   );
 }
 

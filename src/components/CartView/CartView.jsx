@@ -34,7 +34,7 @@ export const CartView = () => {
                             </div>
                         </div>
                     )}
-                    <div>
+                    <div className='botones'>
                         <div>
                             <h5>Total: ${totalCart()}</h5>
                         </div>
