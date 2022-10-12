@@ -3,6 +3,9 @@
 # Proyecto e-commerce con ReactJS
 Tienda electrónica de golosinas que simula la compra de productos. Contiene buscador de productos, carrito, categorías, formulario para completar la compra y demás funciones básicas de una tienda.
 
+# Navegación por la tienda
+
+
 # Dependencias
 
 ### `npm install react-bootstrap@next bootstrap@5.2.1`
@@ -16,3 +19,6 @@ Permite estilar la web con el lenguaje de hojas de estilos sass, personalizando 
 
 ### `npm install react-icons --save`
 Permite usar íconos de react mediante importaciones.
+
+### `npm instal --save firebase`
+Permite utilizar firebase como base de datos.

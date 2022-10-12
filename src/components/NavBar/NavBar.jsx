@@ -7,7 +7,7 @@ function NavBar() {
   
   return (
       <nav id="navBar" className="navbar navbar-expand-lg navbar-dark">
-        <div className="container-fluid">
+        <div className="container container-fluid">
           <Link to={'/'} ><img className="navLogo" src="../../img/logo.jpg" /></Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
@@ -21,17 +21,9 @@ function NavBar() {
                 <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Productos</a>
                 <div className="dropdown-menu">
                   <Link to={'/category/chocolates'} className="dropdown-item" >Chocolates</Link>
+                  <Link to={'/category/golosinas'} className="dropdown-item" >Golosinas</Link>
                   <Link to={'/category/postres'} className="dropdown-item" >Postres</Link>
                 </div>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Promos</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Ubicación</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Contacto</a>
               </li>
             </ul>
             <Form placeholder = "Productos" />

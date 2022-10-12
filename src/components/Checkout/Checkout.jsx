@@ -36,7 +36,6 @@ export const Checkout = () => {
         const date = new Date()
         const total = totalCart()
         const data = {buyer, items, date, total}
-        console.log('data', data)
         orders(data)
     }
 
