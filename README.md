@@ -4,7 +4,7 @@
 Tienda electrónica de golosinas que simula la compra de productos. Contiene buscador de productos, carrito, categorías, formulario para completar la compra y demás funciones básicas de una tienda.
 
 # Navegación por la tienda
-img
+![img](https://github.com/TomasLazarte/react-js-primer-desafio/blob/main/src/media/gif.gif)
 
 # Dependencias
 
